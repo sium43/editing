@@ -393,7 +393,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
         }
         
         .modal-content {
@@ -1436,7 +1436,7 @@
         
         <div class="header-original">
             <div class="company-name">✨ Beetech Bonus Count & Track ✨</div>
-            <small class="unofficial-text">Unofficial Document * Based on Company Policies as of 10-10-25</small>
+            <small class="unofficial-text">UNOFFICIAL DOCUMENT * Based on company policies as of 10-10-25</small>
             <div class="document-title">🎁 ক্লাব বোনাস বিবরণী 🎁</div>
             <div class="customer-info">
                 <div class="info-box">
@@ -1570,8 +1570,8 @@
                 </div>
 
                 <div class="info-box">
-                    <strong>বেস্ট এক্সপেরিয়েন্স কোথায় পাবো?</strong>
-                    <p>অ্যাপে বেস্ট এক্সপেরিয়েন্স পেতে অবশ্যই app ব্যবহার করতে হবে। তবে কিছু ডিভাইসে ফাইল ডাউনলোড/প্রিন্ট করা অথবা ডাউনলোড ফাইল মেমোরিতে খুজে পেতে সমস্যা হলে ওয়েবসাইট লিংক কপি করে ভিন্ন ব্রাওসারে ব্যবহার করতে পারেন, তবে সেক্ষেত্রে ডকুমেন্টের ফন্ট সাইজ ছোটো হয়ে যেতে পারে। এজন্য app ব্যবহার বেটার।</p>
+                    <strong>বেস্ট এক্সপেরিয়েন্স আপে কীভাবে পাবো?</strong>
+                    <p>অ্যাপে বেস্ট এক্সপেরিয়েন্স পেতে মাঝে মাঝে অ্যাপের ক্যাশ মেমোরি ক্লিয়ার করুন। এটি করতে সেটিংস > অ্যাপ্লিকেশন > Beetech অ্যাপ > স্টোরেজ > ক্যাশ ক্লিয়ার অপশনে যান। এতে অ্যাপ দ্রুত চলবে এবং সমস্যা কমবে।</p>
                 </div>
 
                 <div class="info-box">
@@ -1679,7 +1679,7 @@
                 </ul>
             </div>
 
-            <!-- কাজ শুরু করার গাইড -->
+            <!-- দ্রুত শুরু গাইড -->
             <div style="background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 8px; padding: 12px; margin: 15px 0;">
                 <p style="margin: 0 0 8px 0; color: #0c5460; font-weight: 600; font-size: 14px;">⚡ কাজ শুরু করার গাইড:</p>
                 <div style="display: flex; align-items: center; background: white; padding: 8px; border-radius: 6px; margin: 5px 0;">
@@ -1722,15 +1722,15 @@
         const miniFormHeight = 100; // Increased height to 100px to prevent overlap
         const appLink = 'https://drive.google.com/uc?export=download&id=1IsZ3FrOB0_8HGc07CtTbhC4RJR3ZFEXs';
         const websiteLink = 'https://beetechbonuscount.vercel.app/';
-        const sheetScriptURL = ''; // Original for join/visit
-        const docGenerateURL = ''; // Original for doc generate
-        const sellsUpdateURL = ''; // Original sells update
-        const newUnifiedSheetURL = 'https://script.google.com/macros/s/AKfycbzmMsKnEx1APu2W7LlHEJVxO61m-G0hJZHEfOmS-TaeeTEysorqfJUD39W1Km0x_ZW-/exec'; // New unified sheet URL (replace with actual)
+        const sheetScriptURL = 'https://script.google.com/macros/s/AKfycbxTf34h9nzo6EBm5acbT11xcFv16Mahs91PHBVEYp241GPBp9q9IVF87ElzZRAgrj_Olw/exec'; // Original for join/visit
+        const docGenerateURL = 'https://script.google.com/macros/s/AKfycbzUoKicSJN04RbwijVBeQSoMA7pA8vICHzpFR30aJvPujM9nCOEL-SkdGv_RMGuxZ8ZDw/exec'; // Original for doc generate
+        const sellsUpdateURL = 'https://script.google.com/macros/s/AKfycbx1a1AkSaJMXpUGffOU_KmS6zCJINW3KyxrAtWC-LEBXdttpmnLNW3i-XbCmB7EswNg3Q/exec'; // Original sells update
+        const newUnifiedSheetURL = 'https://script.google.com/macros/s/AKfycbztbxA_vqebAkWc8e2-v_y25CKFzy7QR0FINASoWdtQyyu8jVYiQGccZrpxBaZYKI2x/exec'; // New unified sheet URL (replace with actual)
 
         function formatBanglaNumber(num) {
             const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
             return num.toString().split('').map(d => banglaDigits[parseInt(d)] || d).join('');
-  
+        }
         
         function formatCurrency(amount) {
             return amount.toLocaleString('bn-BD');
