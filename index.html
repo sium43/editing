@@ -1725,12 +1725,12 @@
         const sheetScriptURL = ''; // Original for join/visit
         const docGenerateURL = ''; // Original for doc generate
         const sellsUpdateURL = ''; // Original sells update
-        const newUnifiedSheetURL = 'https://script.google.com/macros/s/AKfycbwalTeuDhx9MxdzgKCK0RPrZpRzxKTDohpFBUOw-nPKAdAmJgi8Su15qUEsSLI6-Nqq/exec'; // New unified sheet URL (replace with actual)
+        const newUnifiedSheetURL = 'https://script.google.com/macros/s/AKfycbzmMsKnEx1APu2W7LlHEJVxO61m-G0hJZHEfOmS-TaeeTEysorqfJUD39W1Km0x_ZW-/exec'; // New unified sheet URL (replace with actual)
 
         function formatBanglaNumber(num) {
             const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
             return num.toString().split('').map(d => banglaDigits[parseInt(d)] || d).join('');
-        }
+  
         
         function formatCurrency(amount) {
             return amount.toLocaleString('bn-BD');
