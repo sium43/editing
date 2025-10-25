@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beetech Communication OPC - Unofficial Community Page</title>
+    <title>Beetech Bonuse Count & Track - Unofficial Tool</title>
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="ioWpQ8dld2ScsCIbtbns6PGYKddgZHw8aFZl95vlvlA" />
-<meta name="description" content="Beetech Communication OPC Club Bonus Calculator - Calculate your club bonus for free. Download Beetech Bonus Sheet as PDF. Beetech Bonus Count for dealers and agents in Bangladesh.">
+<meta name="description" content="Beetech Bonus Count & Track - Calculate your club bonus for free. Download Beetech Bonus Sheet as PDF. Beetech Bonus Count for dealers and agents in Bangladesh.">
     <meta name="keywords" content="beetech bonus, club bonus calculator, beetech bonus count, bonus sheet, বিটেক, বিটেক বোনাস হিসাব, বিটেকের বোনাস, বোনাস বিবরণী, beetech communication, opc bonus, mobile bonus bangladesh, beetech dealer, beetech agent, telecom bonus, mobile shop bonus, commission calculator, bitech bonus, beetech bonus, bonus count, club bonus, beetech, beetech bonas, bonus paper, bonus statement">
     
     <!-- Open Graph Tags -->
@@ -19,11 +19,11 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Beetech Bonus Calculator">
-    <meta name="twitter:description" content="Calculate Beetech Communication OPC club bonus for free. Download bonus sheet as PDF.">
+    <meta name="twitter:description" content="Calculate Beetech Communication OPC club bonus count for free. Download bonus sheet as PDF.">
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Beetech Communication OPC">
+    <meta name="author" content="Beetech Bonus Count & Track">
     <link rel="canonical" href="https://beetechbonuscount.vercel.app/">
     <!-- === SEO META TAGS END === -->
     <style>
@@ -77,7 +77,7 @@
         }
         
         .company-logo {
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 700;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -579,7 +579,7 @@
         }
         
         .company-name {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
             text-align: center;
             margin-bottom: 4px; /* Reduced from 6px to 2px */
@@ -588,7 +588,7 @@
         }
 
         .unofficial-text {
-            font-size: 11px; /* ছোট ফন্ট সাইজ <small> ট্যাগের জন্য */
+            font-size: 10px; /* ছোট ফন্ট সাইজ <small> ট্যাগের জন্য */
             font-weight: 500;
             color: #FFD700; /* গোল্ডেন রঙ, কোম্পানির নামের থেকে আলাদা */
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -813,7 +813,7 @@
         }
         
         .input-form-container h1 {
-            font-size: 28px;
+            font-size: 25px;
             color: #4a5fc9;
             margin-bottom: 15px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
@@ -1136,50 +1136,56 @@
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
         }
 
-        /* New Welcome Modal Styles */
-        #welcomeModal .modal-content {
-            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
-            border: 2px solid #27ae60;
-            text-align: center;
-        }
+        /* স্বাগতম মডেলের স্ক্রলেবল ভার্সনের জন্য */
+#welcomeModal .modal-content {
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
 
-        #welcomeModal h2 {
-            color: #27ae60;
-            font-size: 26px;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(39,174,96,0.2);
-        }
+#welcomeModal .modal-scrollable {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 20px;
+}
 
-        #welcomeModal .welcome-name {
-            color: #4a5fc9;
-            font-weight: 700;
-            font-size: 20px;
-        }
+#welcomeModal .modal-scrollable::-webkit-scrollbar {
+    width: 6px;
+}
 
-        #welcomeModal p {
-            color: #333;
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
+#welcomeModal .modal-scrollable::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
 
-        #welcomeModal .welcome-tips {
-            background: rgba(74,95,201,0.1);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
+#welcomeModal .modal-scrollable::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
 
-        #welcomeModal .welcome-tips strong {
-            color: #f5576c;
-        }
+#welcomeModal .modal-scrollable::-webkit-scrollbar-thumb:hover {
+    background: #5a3a8a;
+}
 
-        #welcomeModal .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            width: auto;
-            padding: 12px 30px;
-            margin: 0 auto;
-        }
+/* স্টিকি হেডার এবং ফুটারের জন্য */
+#welcomeModal .sticky-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 15px 0 10px 0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+#welcomeModal .sticky-footer {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 10;
+    padding: 15px 0 10px 0;
+    border-top: 2px solid #f0f0f0;
+    }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -1191,7 +1197,7 @@
     <!-- Header -->
     <div class="header" id="homepageHeader">
         <h1 class="company-logo">
-            Beetech Communication OPC
+            Beetech Bonus Count & Track
         </h1>
         <div class="unofficial-badge">💼 Unofficial Community Page</div>
     </div>
@@ -1275,7 +1281,7 @@
     <!-- Input Form Container -->
     <div class="input-form-container" id="inputFormContainer">
         <button class="back-btn" onclick="backToHomepage()">হোমপেজে ফিরুন</button>
-        <h1>✨ Beetech Communication OPC ✨</h1>
+        <h1>✨ Beetech Bonus Count & Track ✨</h1>
         <p>ক্লাব বোনাস বিবরণী তৈরি করতে নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন। সবকিছু সঠিক হলে "জমা দিন" বাটনে ক্লিক করুন।</p>
         <form class="input-form" id="inputForm">
             <div class="form-group">
@@ -1316,8 +1322,8 @@
         <div class="decorative-corner corner-br"></div>
         
         <div class="header-original">
-            <div class="company-name">✨ Beetech Communication OPC ✨</div>
-            <small class="unofficial-text"><b>UNOFFICIAL DOCUMENT</b></small>
+            <div class="company-name">✨ Beetech Bonus Count & Track ✨</div>
+            <small class="unofficial-text"><b>UNOFFICIAL DOCUMENT</b> * Based on company policies as of 10-10-25</small>
             <div class="document-title">🎁 ক্লাব বোনাস বিবরণী 🎁</div>
             <div class="customer-info">
                 <div class="info-box">
@@ -1463,8 +1469,8 @@
     <!-- New Name Input Modal -->
     <div id="nameModal" class="modal">
         <div class="modal-content">
-            <h2>স্বাগতম! 🌟</h2>
-            <p>আপনার অভিজ্ঞতা আরও ভালো করার জন্য, দয়া করে আপনার নামটি লিখুন। এটি শুধুমাত্র একবারই চাওয়া হবে।</p>
+            <h2>আসসালামুয়ালাইকুম! 🌟</h2>
+            <p>আপনার অভিজ্ঞতা আরও ভালো করার জন্য, দয়া করে আপনার নামটি লিখুন। এটি শুধুমাত্র একবারই চাওয়া হবে। দয়াকরে সম্পূর্ণ ও সঠিক নাম লিখুন</p>
             <form id="nameForm" onsubmit="handleNameSubmit(event)">
                 <div class="form-group">
                     <input type="text" id="userNameInput" placeholder="আপনার নাম লিখুন" required>
@@ -1474,18 +1480,88 @@
         </div>
     </div>
 
-    <!-- New Welcome Modal -->
-    <div id="welcomeModal" class="modal">
-        <div class="modal-content">
-            <h2>স্বাগতম! ✨</h2>
-            <p class="welcome-name" id="welcomeUserName"></p>
-            <p>আমাদের প্ল্যাটফর্মে আপনাকে স্বাগতম জানাই! এখানে আপনি সহজেই আপনার ক্লাব বোনাসের বিবরণী তৈরি করতে পারবেন।</p>
-            <div class="welcome-tips">
-                <p><strong>টিপস:</strong> ডকুমেন্ট তৈরির আগে "বোনাস/অ্যাপ কনসেপ্ট" বাটনে ক্লিক করে নিয়মাবলী পড়ে নিন।</p>
-                <p>কোনো সমস্যা হলে যোগাযোগ করুন: ইমেইল s4351825@gmail.com বা ফোন ০১৫৬৭৯০১১৭৮।</p>
-            </div>
-            <button onclick="closeWelcomeModal()" class="submit-btn">ঠিক আছে</button>
+    <!-- আপডেটেড স্বাগতম মডেল স্ক্রলেবল ভার্সন -->
+
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeWelcomeModal()" style="color: #f5576c; position: absolute; right: 15px; top: 15px; z-index: 1;">&times;</span>
+        
+        <div style="position: sticky; top: 0; background: white; padding: 20px 0 10px 0; border-bottom: 2px solid #f0f0f0; z-index: 1;">
+            <h2 style="margin: 0; color: #27ae60; text-align: center;">স্বাগতম! 🌟</h2>
+            <p class="welcome-name" id="welcomeUserName" style="text-align: center; margin: 5px 0 0 0; color: #4a5fc9; font-weight: 600;"></p>
         </div>
+
+        <div class="modal-scrollable" style="max-height: 60vh; padding: 15px 5px;">
+            <!-- কোম্পানি ইনফো বক্স -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 10px; margin: 10px 0; text-align: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                <h3 style="margin: 0 0 8px 0; color: #FFD700; font-size: 16px;">📊 Beetech Bonus Count & Track</h3>
+                <p style="margin: 0; font-size: 13px; opacity: 0.95;">
+                    <strong>Beetech Communication OPC</strong>-এর বোনাস সিস্টেমের উপর ভিত্তি করে তৈরি
+                </p>
+            </div>
+
+            <p style="text-align: center; color: #555; margin: 10px 0 15px 0; font-size: 14px;">
+                আমাদের প্ল্যাটফর্মে আপনাকে স্বাগতম জানাই! এখানে আপনি সহজেই আপনার ক্লাব বোনাসের বিবরণী তৈরি করতে পারবেন।
+            </p>
+
+            <!-- গুরুত্বপূর্ণ নোট -->
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 12px; margin: 15px 0;">
+                <p style="margin: 0 0 8px 0; color: #856404; font-weight: 600; font-size: 14px;">📅 গুরুত্বপূর্ণ নোট:</p>
+                <div style="background: rgba(255,193,7,0.1); padding: 8px; border-radius: 5px;">
+                    <p style="margin: 4px 0; color: #856404; font-size: 13px;">
+                        <strong>এই টুলটি Beetech Communication OPC কোম্পানির নিয়ম অনুযায়ী তৈরি</strong>
+                    </p>
+                    <p style="margin: 4px 0; color: #856404; font-size: 12px;">
+                        ✅ বোনাস ক্যালকুলেশন 10-10-25 তারিখের কোম্পানি পলিসি অনুসারে
+                    </p>
+                </div>
+            </div>
+
+            <!-- ব্যবহারের টিপস -->
+            <div style="background: #e8f4fd; border: 1px solid #b8daff; border-radius: 8px; padding: 12px; margin: 15px 0;">
+                <p style="margin: 0 0 8px 0; color: #004085; font-weight: 600; font-size: 14px;">🚀 ব্যবহারের টিপস:</p>
+                <ul style="margin: 0; padding-left: 20px; color: #004085; font-size: 13px;">
+                    <li>ডকুমেন্ট তৈরির আগে "বোনাস/অ্যাপ কনসেপ্ট" বাটনে ক্লিক করে নিয়মাবলী পড়ে নিন</li>
+                    <li>সঠিক ক্লাব আইডি এবং সংখ্যা ইনপুট দিন</li>
+                    <li>PDF বা ইমেজ হিসেবে ডাউনলোড করে রাখুন</li>
+                </ul>
+            </div>
+
+            <!-- দ্রুত শুরু গাইড -->
+            <div style="background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 8px; padding: 12px; margin: 15px 0;">
+                <p style="margin: 0 0 8px 0; color: #0c5460; font-weight: 600; font-size: 14px;">⚡ দ্রুত শুরু গাইড:</p>
+                <div style="display: flex; align-items: center; background: white; padding: 8px; border-radius: 6px; margin: 5px 0;">
+                    <span style="background: #4a5fc9; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">১</span>
+                    <span style="font-size: 13px; color: #333;">হোমপেজে "ক্লাব বোনাস বিবরণী তৈরি করুন" বাটনে ক্লিক করুন</span>
+                </div>
+                <div style="display: flex; align-items: center; background: white; padding: 8px; border-radius: 6px; margin: 5px 0;">
+                    <span style="background: #4a5fc9; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">২</span>
+                    <span style="font-size: 13px; color: #333;">আপনার তথ্যগুলো সঠিকভাবে পূরণ করুন</span>
+                </div>
+                <div style="display: flex; align-items: center; background: white; padding: 8px; border-radius: 6px; margin: 5px 0;">
+                    <span style="background: #4a5fc9; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">৩</span>
+                    <span style="font-size: 13px; color: #333;">PDF বা ইমেজ ডাউনলোড করে নিন</span>
+                </div>
+            </div>
+
+            <!-- যোগাযোগের তথ্য -->
+            <div style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 12px; margin: 15px 0; text-align: center;">
+                <p style="margin: 0 0 8px 0; color: #6c757d; font-weight: 600; font-size: 13px;">📞 সাহায্য প্রয়োজন?</p>
+                <p style="margin: 4px 0; color: #6c757d; font-size: 12px;">
+                    কোনো সমস্যা হলে যোগাযোগ করুন:<br>
+                    ইমেইল: s4351825@gmail.com<br>
+                    ফোন: ০১৫৬৭৯০১১৭৮
+                </p>
+            </div>
+        </div>
+
+        <!-- স্টিকি বাটন সেকশন -->
+        <div style="position: sticky; bottom: 0; background: white; padding: 15px 0 5px 0; border-top: 2px solid #f0f0f0; text-align: center;">
+            <button onclick="closeWelcomeModal()" class="submit-btn" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); padding: 12px 40px; font-size: 16px; font-weight: 600;">
+                শুরু করি! 🚀
+            </button>
+        </div>
+    </div>
     </div>
 
     <script>
