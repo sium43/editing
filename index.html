@@ -2161,15 +2161,21 @@
             document.getElementById('clubCounter').textContent = formatted;
         }
 
-        // Function to update last update date
+        // function last date show
         function updateLastUpdateDate(dateStr) {
-            const date = new Date(dateStr);
-            const formatted = date.toLocaleDateString('bn-BD', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric'
-            }).replace(/\//g, '-');
-            document.getElementById('lastUpdateDate').textContent = formatted;
+    const date = new Date(dateStr);
+    const formattedDate = date.toLocaleDateString('bn-BD', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }).replace(/\//g, '-');
+    const formattedTime = date.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+    document.getElementById('lastUpdateDate').textContent = `${formattedDate} ${formattedTime}`;
         }
         
         // Load last club count from NEW UNIFIED Google Sheet on page load
