@@ -1731,6 +1731,14 @@
             return num.toString().split('').map(d => banglaDigits[parseInt(d)] || d).join('');
         }
         
+        function banglaToEnglishDigits(str) {
+            const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+            return str.split('').map(char => {
+                const index = banglaDigits.indexOf(char);
+                return index !== -1 ? index.toString() : char;
+            }).join('');
+        }
+        
         function formatCurrency(amount) {
             return amount.toLocaleString('bn-BD');
         }
@@ -2162,19 +2170,34 @@
 
         // function last date show
         function updateLastUpdateDate(dateStr) {
-    const date = new Date(dateStr);
-    const formattedDate = date.toLocaleDateString('bn-BD', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    }).replace(/\//g, '-');
-    const formattedTime = date.toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    });
-    document.getElementById('lastUpdateDate').textContent = `${formattedDate} ${formattedTime}`;
+            // Convert Bangla digits to English
+            const engDateStr = banglaToEnglishDigits(dateStr);
+            
+            // Assume format DD/MM/YYYY or similar, split by '/'
+            const parts = engDateStr.split('/');
+            if (parts.length !== 3) {
+                document.getElementById('lastUpdateDate').textContent = 'Invalid Date';
+                return;
+            }
+            
+            // Create YYYY-MM-DD for new Date()
+            const isoDate = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+            const date = new Date(isoDate);
+            
+            if (isNaN(date.getTime())) {
+                document.getElementById('lastUpdateDate').textContent = 'Invalid Date';
+                return;
+            }
+            
+            // Format in Bangla digits as DD-MM-YYYY
+            const formattedDate = date.toLocaleDateString('bn-BD', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            }).replace(/\//g, '-');
+            
+            // Display only date (no time, as sheet has no time)
+            document.getElementById('lastUpdateDate').textContent = formattedDate;
         }
         
         // Load last club count from NEW UNIFIED Google Sheet on page load
